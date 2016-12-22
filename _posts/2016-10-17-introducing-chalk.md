@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Introducing chalk"
 description: "Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll."
 tags: [web, jekyll]
