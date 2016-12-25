@@ -1,7 +1,7 @@
 # Mandatory settings
 
 name: Cloud/IoT NewsLetters
-paginate: 5
+paginate: 10
 paginate_path: "/posts/page/:num/"
 url: # add site url http://example.com/
 blog_theme: light # Or use dark
