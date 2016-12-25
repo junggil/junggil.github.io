@@ -34,7 +34,7 @@ tags: [개인프로젝트, Jarvis, HTTP/2, Leap Second, Amazon Go, 오픈소스 
 * 세슘 원자시계와 실제 시간의 보정을 위해서 윤초 1초가 삽입될 예정입니다. 
 * 2016년 12월 31일 23:59:59가 2번 발생하는 형식으로 보정이 되는 것이 일반적인 해법인데 AWS에서의 대응방법을 소개합니다.
     * EC2 (Amazon Linux): 자동으로 윤초가 적용됩니다. 관리할 필요 없음. 
-    * EC2 (Amazon Linux 외): AWS에서 제공하는 NTP 서버 (Amazon Adjusted Time Server)로 시간 동기화 설정 필요.
+    * EC2 (Amazon Linux 외): AWS에서 제공하는 NTP 서버 (Amazon Adjusted Time Server)로 시간 동기화 `설정 필요`.
     * RDS: 12월 31일 23:59:59가 2번 발생하도록 자동으로 보정
     * PaaS (AWS IoT, Lambda, API Gateway, DynamoDB): 자동으로 보정될 것으로 예상하지만 `확인 필요`
 
@@ -45,7 +45,8 @@ tags: [개인프로젝트, Jarvis, HTTP/2, Leap Second, Amazon Go, 오픈소스 
     2. Server Push : Client가 요청하기 전에 서버에서 HTML 문서 구조를 분석해서 필요한 리소스를 전달
     3. Header Compression: Huffman Encoding을 적용하여 전송 사이즈를 최소화
 * 그런데 위의 사항들은 기본적으로 HTML 기반 Web 페이지를 전제로 하였기 때문에, 
-    * REST API 서버에 대해서는 3번만이 의미가 있음 (HTTP/2의 효과가 상대적으로 `낮음`)
+    * REST API 서버에 대해서는 3번만이 의미가 있음 
+    * 따라서 HTTP/2의 효과가 상대적으로 `낮음`
     * 관련 Stackoverflow 글 [Link](http://stackoverflow.com/questions/31692868/rest-api-with-http-2){:target:"_blank"}
 
 #### Amazon Go 관련
