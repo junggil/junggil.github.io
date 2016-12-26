@@ -28,7 +28,7 @@ tags: [개인프로젝트, Jarvis, HTTP/2, Leap Second, Amazon Go, 오픈소스 
     * 100시간의 개발시간이 소요되었다고 하며, 
     * 개인프로젝트의 규모와 모건 프리먼의 목소리가 인상적입니다.
     * 특허 출원중인 관련 구조도는 아래와 같습니다. 
-{% include image.html path="post/Jarvis.jpg" path-detail="documentation/sample-image@2x.jpg" alt="Sample image" %}
+{% include image.html path="post/Jarvis.jpg" path-detail="post/Jarvis" %}
 
 #### [Look Before You Leap – December 31, 2016 Leap Second on AWS](https://aws.amazon.com/ko/blogs/aws/look-before-you-leap-december-31-2016-leap-second-on-aws/){:target="_blank"}
 * 세슘 원자시계와 실제 시간의 보정을 위해서 윤초 1초가 삽입될 예정입니다. 
