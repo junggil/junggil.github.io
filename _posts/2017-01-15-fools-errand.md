@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[NewsLetter] Fool's Errand (+ 19건)"
-description: "회사 내부시스템의 약점을 노출하여 개선하는 사례"
+description: "회사 내부시스템의 약점을 적극적으로 노출하여 시스템을 보완/개선하는 사례"
 tags: [Fool's Errand, Agile, 비판 수용, 직무 만족도, 존댓말, 지문인식, 홍채인식, Alexa Fail, Python Tips, Mutation Testing, fzf, Steve Jobs, 디지털 노마드, 이력서]
 ---
 
