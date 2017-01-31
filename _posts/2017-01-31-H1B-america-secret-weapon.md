@@ -177,12 +177,12 @@ tags: [H1B, Azure, FaceApp, Bitesnap, IoT Security, Origin of Patch, Clean Coder
     * 골넷트에 모션센서가 부착되어 있어 골을 넣으면 그 시점부터 30초간의 영상이 자동으로 사용자의 단말로 전송됩니다.
 
 #### 우리 엄마는 집에 없어요
-* [Link](http://thepin.ch/life/mxvgwd/working-mom){target="_blank"}
+* [Link](http://thepin.ch/life/mxvgwd/working-mom){:target="_blank"}
     * 워킹맘이 겪는 아픔과 희생들이 어떤 것들이 있는지 담담하게 적고 있습니다.
     * 사회가 만들어놓은 시선에서 육아 이슈들에 대한 엄마 탓은 쉽고, 그런 논의에서 남자들은 어디론가 사라지고 없기 쉽상이다. 받은 것에 감사하고, 노력해야 합니다.
 
 #### The Twelve Fator App
-* Link(https://12factor.net/ko/){:target="_blank"}
+* [Link](https://12factor.net/ko/){:target="_blank"}
 * Heroku에서 권장하는 SaaS 앱을 만들기 위한 방법론입니다.
     * 한글화도 되어있어서 한글화 페이지 링크를 걸어두었습니다.
     * 컨테이너와 서버리스를 포함하는 Application의 배포에 대한 원칙들을 12가지로 정리하였습니다.
