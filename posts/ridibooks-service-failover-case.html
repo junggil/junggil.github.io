@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Cloud/IoT NewsLetters | [NewsLetter] 리디북스 서비스 장애 복구 후기 (+ 10 건)</title>
+  <meta name="description" content="리디북스의 데이터 센터 이중화 구성을 통한 고가용성 설계와, 장애 발생시에 대응 전략을 통한 교훈">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="[NewsLetter] 리디북스 서비스 장애 복구 후기 (+ 10 건)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/posts/ridibooks-service-failover-case">
+  <meta property="og:description" content="리디북스의 데이터 센터 이중화 구성을 통한 고가용성 설계와, 장애 발생시에 대응 전략을 통한 교훈">
+  <meta property="og:site_name" content="Cloud/IoT NewsLetters">
+  <meta property="og:image" content="/assets/og-image.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="/posts/ridibooks-service-failover-case">
+  <meta name="twitter:title" content="[NewsLetter] 리디북스 서비스 장애 복구 후기 (+ 10 건)">
+  <meta name="twitter:description" content="리디북스의 데이터 센터 이중화 구성을 통한 고가용성 설계와, 장애 발생시에 대응 전략을 통한 교훈">
+  <meta name="twitter:image" content="/assets/og-image.jpg">
+
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link href="/feed.xml" type="application/rss+xml" rel="alternate" title="Cloud/IoT NewsLetters Last 10 blog posts" />
+
+  
+    <link type="text/css" rel="stylesheet" href="/assets/light.css">
+  
+</head>
+
+<body>
+  <main role="main">
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav reveal">
+  <a href="/" class="header-logo" title="Cloud/IoT NewsLetters">Cloud/IoT NewsLetters</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <span class="icon icon-android-person"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://twitter.com/funxiah" target="_blank" title="Twitter">
+          <span class="icon icon-social-twitter"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://www.facebook.com/jeonggil.lee.7" target="_blank" title="Facebook">
+          <span class="icon icon-social-facebook"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/sooshia" target="_blank" title="GitHub">
+          <span class="icon icon-social-github"></span>
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="mailto:sooshia@gmail.com" target="_blank" title="Email">
+          <span class="icon icon-at"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed.xml" target="_blank" title="RSS">
+          <span class="icon icon-social-rss"></span>
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+        <article class="article reveal">
+          <header class="article-header">
+            <h1>[NewsLetter] 리디북스 서비스 장애 복구 후기 (+ 10 건)</h1>
+            <p>리디북스의 데이터 센터 이중화 구성을 통한 고가용성 설계와, 장애 발생시에 대응 전략을 통한 교훈</p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                September 7, 2016
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  3 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/리디북스">리디북스</a>
+                
+                  <a href="/tag/장애">장애</a>
+                
+                  <a href="/tag/IoT">IoT</a>
+                
+                  <a href="/tag/ElasticSearch">ElasticSearch</a>
+                
+                  <a href="/tag/Go Lang">Go Lang</a>
+                
+                  <a href="/tag/Kakao">Kakao</a>
+                
+                  <a href="/tag/KEMI">KEMI</a>
+                
+                  <a href="/tag/AI">AI</a>
+                
+                  <a href="/tag/세미나">세미나</a>
+                
+                  <a href="/tag/UX">UX</a>
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <h2 id="개발-관련">개발 관련</h2>
+
+<h4 id="리디북스-서비스-장애-복구-후기"><a href="http://www.ridicorp.com/blog/2016/09/02/idc-outage/" target="_blank">리디북스 서비스 장애 복구 후기</a></h4>
+<p><a href="/assets/post/ridibooks_service_fail_recover_tips.png" class="fluidbox-trigger">
+  <img src="/assets/post/ridibooks_service_fail_recover_tips.png" alt="" />
+</a></p>
+
+<ul>
+  <li>Multi-AZ 구성의 중요성
+    <ul>
+      <li>리디북스는 AWS가 아니라 별도의 데이터 센터를 쓰고 있기 때문에, Multi-AZ를 위해서는 2개 이상의 데이터 센터로 이중화를 구성을 해야 하는 상황이 저희와 차이가 있습니다.</li>
+    </ul>
+  </li>
+  <li>장애 공지를 위한 별도 인프라 구성</li>
+  <li><strong>장애 발생 후에 대처</strong>가 훌륭합니다.
+    <ul>
+      <li>복구 완료 시점이 명확하지 않았기 때문에, 전체 구성에 대해서 즉시 Provisioning 결정</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="iot-관련-논쟁">IoT 관련 논쟁</h4>
+<ol>
+  <li><a href="https://techcrunch.com/2016/08/31/iots-killer-app-is-home-security/" target="_blank">IoT’s killer app is home security</a></li>
+  <li><a href="https://techcrunch.com/2016/09/03/iots-killer-app-is-not-home-security/" target="_blank">IoT’s killer app is not home security</a>
+    <ul>
+      <li>1번 기사에 대해서 반박이 2번 기사 입니다.</li>
+      <li>저는 2번 내용에 대해서 많이 공감을 하고, 현재 IoT 제품들이 보안 쪽에 포커싱을 하고 있지만 그 기반이 되는 Wifi / 전원 등을 차단하면 손쉽게 무력화가 가능하다는 점은 큰 단점이고 해결이 되어야 하는 부분이라고 생각합니다.</li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p>2016.12월 기준으로 <code class="highlighter-rouge">AWS IoT Greengrass</code>가 출시되면서, 외부 네트워크가 차단된 상태에서도 IoT 기기의 동작성을 보장할 수 있도록 되었습니다.</p>
+</blockquote>
+
+<h4 id="elasticsearch-based-image-search-using-rgb-signatures"><a href="http://sujitpal.blogspot.kr/2016/05/elasticsearch-based-image-search-using.html" target="_blank">Elasticsearch based Image Search using RGB Signatures</a></h4>
+<ul>
+  <li>텍스트 기반이 아니라 이미지를, RGB Signature를 뽑아서 가장 유사도 높은 이미지를 검색하도록 Elasticsearch를 적용한 사례입니다.</li>
+  <li>괜찮아 보이기는 한데, 왠지 Elasticsearch보다 더 적합한 도구가 있지 않을까 하는 생각이 드네요 (왠지 원래 목적과 다르게 변태같이 쓰는 기분이라서 .. )</li>
+</ul>
+
+<h4 id="go-언어-관련-모음">Go 언어 관련 모음</h4>
+<ol>
+  <li><a href="https://andromedarabbit.net/wp/%EA%B8%B0%EC%88%A0-%ED%83%90%EC%83%89-golang/" target="_blank">기술탐색 golang</a> (JAVA 개발자의 golang에 대한 전반적인 감상평 – 공감되는 부분이 있습니다.)
+    <ul>
+      <li>쓸만한 웹프레임워크 및 ORM이 부족함</li>
+      <li>그래서 비지니스 로직에 직접 적용하기 보다는 동시성이 필요한 내부 서비스에 우선 적용하는 것이 좋을 것 같다는 의견</li>
+    </ul>
+  </li>
+  <li><a href="https://talks.golang.org/2016/applicative.slide#1" target="_blank">Program your next server in Go</a></li>
+  <li><a href="http://blog.narenarya.in/concurrent-http-in-go.html" target="_blank">Making concurrent HTTP requests in Go</a>
+    <ul>
+      <li>읽어볼만 하긴 한데, 끝에 python3와의 비교가 공정하지 않네요.</li>
+      <li>go-coroutine을 썼으면 python3에서도 gevent or asyncio를 써야 공평한 조건이라고 봅니다.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="카카오의-전사-리소스-모니터링-시스템---kemi"><a href="http://tech.kakao.com/2016/08/25/kemi/" target="_blank">카카오의 전사 리소스 모니터링 시스템 - KEMI</a></h4>
+<p><a href="/assets/post/kakao_kemi_status_monitoring_system.png" class="fluidbox-trigger">
+  <img src="/assets/post/kakao_kemi_status_monitoring_system.png" alt="" />
+</a></p>
+
+<ul>
+  <li>카카오에서 로그 수집 / 모니터링을 위해서 어떤 기술 스택을 사용하고 있는지를 참고할 수 있습니다.</li>
+</ul>
+
+<h4 id="스탠포드-ai100-프로젝트의-첫번째-보고서-공개"><a href="https://ai100.stanford.edu/2016-report" target="_blank">스탠포드 AI100 프로젝트의 첫번째 보고서 공개</a></h4>
+<ul>
+  <li>AI에 대한 100년 범위의 백서 입니다.
+    <ul>
+      <li>AI의 정의에서부터 시작하는 …</li>
+    </ul>
+  </li>
+  <li>차량/운송을 포함해서 각 도메인 별 경향을 간단히 소개한 뒤, 2030년의 한 도시에서 AI가 일상 생활에 주는 변화와 영향에 대해서 기술하고 있다고 합니다.</li>
+  <li>영어와 분량의 압박으로 정독을 하지 못했는데, 관심 있는 분들 읽어 보시면 좋을 것 같습니다.</li>
+</ul>
+
+<h2 id="세미나-정보">세미나 정보</h2>
+
+<h4 id="서버리스-아키텍처-api-gateway--lambda-위주-세미나"><a href="http://onoffmix.com/event/76932" target="_blank">서버리스 아키텍처 (API Gateway / Lambda 위주) 세미나</a></h4>
+<ul>
+  <li>한국 아마존 사용자 그룹 정기 세미나 입니다.</li>
+  <li>저는 이런 소규모 세미나에 관심이 많고 참석을 하고 싶지만, 이런 류의 밋업들이 특징인 공통적인 세션 전/후반에 네트워킹 시간이 부담이라 아직 시도를 못해보았습니다.</li>
+  <li>9/21일 (수) 18:30 ~ 21:00</li>
+</ul>
+
+<h2 id="기타-읽을-거리">기타 읽을 거리</h2>
+
+<h4 id="google-coder-analyzes-a-billion-files-to-find-a-winner-in-tabs-vs-spaces-debate"><a href="http://gizmodo.com/google-coder-analyzes-a-billion-files-to-find-a-winner-1786016648" target="_blank">Google Coder Analyzes a Billion Files to Find a Winner in Tabs vs Spaces Debate</a></h4>
+<p><a href="/assets/post/tab_vs_spaces_result.png" class="fluidbox-trigger">
+  <img src="/assets/post/tab_vs_spaces_result.png" alt="" />
+</a></p>
+
+<ul>
+  <li>Tab VS Space 에 대한 오랜 싸움의 1차 판정 결과, 승자는 space</li>
+</ul>
+
+<h4 id="how-many-freshmen-want-to-study-computer-science-at-the-university-of-washington-치솟는-cs의-인기"><a href="http://www.geekwire.com/2014/uw-computer-science-majors/" target="_blank">How many freshmen want to study computer science at the University of Washington (치솟는 CS의 인기)</a></h4>
+<p><a href="/assets/post/freshmencse.jpg" class="fluidbox-trigger">
+  <img src="/assets/post/freshmencse.jpg" alt="" />
+</a></p>
+
+<ul>
+  <li>좋기도 하지만 걱정이 더 많이 되네요.</li>
+</ul>
+
+<h4 id="천재성의-특징">천재성의 특징</h4>
+<p><a href="/assets/post/characteristics_of_genius.png" class="fluidbox-trigger">
+  <img src="/assets/post/characteristics_of_genius.png" alt="" />
+</a></p>
+
+<ul>
+  <li>천재들이 보이는 관심의 폭이 어마어마하다는 점에 대해서는 많이 공감합니다.</li>
+</ul>
+
+<h4 id="floor-plan-light-switch"><a href="http://www.yankodesign.com/2011/03/02/know-your-switches/" target="_blank">Floor Plan Light Switch</a></h4>
+<p><a href="/assets/post/floor_plan_switch.jpg" class="fluidbox-trigger">
+  <img src="/assets/post/floor_plan_switch.jpg" alt="" />
+</a></p>
+
+<ul>
+  <li>UX 의 성공적인 예라고 생각합니다.
+    <ul>
+      <li>기술적 관점으로는 현실 가능성이 낮아 보이지만</li>
+    </ul>
+  </li>
+</ul>
+
+          </div>
+
+          <div class="article-share">
+            
+            <a href="" title="Share on Twitter" onclick="window.open('https://twitter.com/home?status=[NewsLetter] 리디북스 서비스 장애 복구 후기 (+ 10 건) - /posts/ridibooks-service-failover-case by @funxiah', 'newwindow', 'width=500, height=225'); return false;">
+              <span class="icon icon-social-twitter"></span>
+            </a>
+            <a href="" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=/posts/ridibooks-service-failover-case', 'newwindow', 'width=500, height=500'); return false;">
+              <span class="icon icon-social-facebook"></span>
+            </a>
+            <a href="" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=/posts/ridibooks-service-failover-case', 'newwindow', 'width=550, height=400'); return false;">
+              <span class="icon icon-social-googleplus"></span>
+            </a>
+          </div>
+
+          
+            <div id="disqus_thread" class="article-comments"></div>
+            <script>
+              (function() {
+                  var d = document, s = d.createElement('script');
+                  s.src = '//sooshia-jekyll.disqus.com/embed.js';
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          
+        </article>
+        <footer class="footer reveal">
+  <p>
+    Chalk is a high quality, completely customizable, performant and 100% free
+    blog template for Jekyll built by
+    <a href="/about" title="About me">Nielsen Ramon</a>. Download it <a href="https://github.com/nielsenramon/chalk" target="_blank" title="Download Chalk">here</a>.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="/assets/vendor.js"></script>
+<script type="text/javascript" src="/assets/application.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Cormorant Garamond:700', 'Lato:300,400,700']
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

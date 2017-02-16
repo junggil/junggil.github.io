@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Cloud/IoT NewsLetters | [NewsLetter] 견고한 서비스를 만들기 위한 팁 (+ 12건)</title>
+  <meta name="description" content="서비스 운영 및 인프라 관리에 대한 조언과, 배포 전략">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="[NewsLetter] 견고한 서비스를 만들기 위한 팁 (+ 12건)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/posts/how-to-make-robust-service">
+  <meta property="og:description" content="서비스 운영 및 인프라 관리에 대한 조언과, 배포 전략">
+  <meta property="og:site_name" content="Cloud/IoT NewsLetters">
+  <meta property="og:image" content="/assets/og-image.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="/posts/how-to-make-robust-service">
+  <meta name="twitter:title" content="[NewsLetter] 견고한 서비스를 만들기 위한 팁 (+ 12건)">
+  <meta name="twitter:description" content="서비스 운영 및 인프라 관리에 대한 조언과, 배포 전략">
+  <meta name="twitter:image" content="/assets/og-image.jpg">
+
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link href="/feed.xml" type="application/rss+xml" rel="alternate" title="Cloud/IoT NewsLetters Last 10 blog posts" />
+
+  
+    <link type="text/css" rel="stylesheet" href="/assets/light.css">
+  
+</head>
+
+<body>
+  <main role="main">
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav reveal">
+  <a href="/" class="header-logo" title="Cloud/IoT NewsLetters">Cloud/IoT NewsLetters</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <span class="icon icon-android-person"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://twitter.com/funxiah" target="_blank" title="Twitter">
+          <span class="icon icon-social-twitter"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://www.facebook.com/jeonggil.lee.7" target="_blank" title="Facebook">
+          <span class="icon icon-social-facebook"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/sooshia" target="_blank" title="GitHub">
+          <span class="icon icon-social-github"></span>
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="mailto:sooshia@gmail.com" target="_blank" title="Email">
+          <span class="icon icon-at"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed.xml" target="_blank" title="RSS">
+          <span class="icon icon-social-rss"></span>
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+        <article class="article reveal">
+          <header class="article-header">
+            <h1>[NewsLetter] 견고한 서비스를 만들기 위한 팁 (+ 12건)</h1>
+            <p>서비스 운영 및 인프라 관리에 대한 조언과, 배포 전략</p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                November 1, 2016
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  4 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/조직문화">조직문화</a>
+                
+                  <a href="/tag/인사">인사</a>
+                
+                  <a href="/tag/채용">채용</a>
+                
+                  <a href="/tag/인프라">인프라</a>
+                
+                  <a href="/tag/운영">운영</a>
+                
+                  <a href="/tag/배포">배포</a>
+                
+                  <a href="/tag/AWS IoT">AWS IoT</a>
+                
+                  <a href="/tag/Dash">Dash</a>
+                
+                  <a href="/tag/면접문제">면접문제</a>
+                
+                  <a href="/tag/Git">Git</a>
+                
+                  <a href="/tag/UI 디자인">UI 디자인</a>
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <h2 id="조직문화">조직문화</h2>
+
+<h4 id="sw회사에는-왜-수평적인-조직문화가-필요한가"><a href="http://m.zdnet.co.kr/column_view.asp?artice_id=20161026091515#imadnews" target="_blank">SW회사에는 왜 수평적인 조직문화가 필요한가</a></h4>
+<p><a href="/assets/post/internal_marketing.png" class="fluidbox-trigger">
+  <img src="/assets/post/internal_marketing.png" alt="" />
+</a></p>
+
+<ul>
+  <li><code class="highlighter-rouge">수평적인 조직</code>에 대한 해석이 핵심이라고 생각합니다.
+    <ul>
+      <li>모든 직원이 평등하다는 의미가 아니라, 직급/나이/경력이 아닌 <em>전문성을 바탕으로 (자율적으로) 역할</em>을 할 수 있어야 한다는 뜻</li>
+    </ul>
+  </li>
+  <li>아래 글과 같이 생각하면 <em>수평적인 조직을 이룰 수 있는 사람들만 채용</em>해야 합니다</li>
+</ul>
+
+<h4 id="그렇다-인사는-만사다"><a href="https://brunch.co.kr/@aaa/6?utm_content=bufferc5035&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer" target="_blank">그렇다. 인사는 만사다</a></h4>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe src="https://www.youtube.com/embed/sF48Tr1CO9w?modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<ul>
+  <li>글 자체는 정리가 좀 덜 된 편입니다.
+    <ul>
+      <li>스크롤 훑으면서 읽어도 좋을 것 같네요.</li>
+    </ul>
+  </li>
+  <li>하지만 공감 가는 문장이 좀 있네요.
+    <ul>
+      <li><em>직장인에게 최고의 복지는 팀 동료</em></li>
+      <li>자율적이고 수평적인 문화를 유지하기 위해서는, 그렇게 어울릴 수 있는 사람을 뽑아야 한다. == 인사(채용)이 무엇보다 중요함</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="개발-관련">개발 관련</h2>
+
+<h4 id="견고한-서비스를-만들기-위한-팁"><a href="http://www.popit.kr/%EA%B2%AC%EA%B3%A0%ED%95%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A5%BC-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EC%9C%84%ED%95%9C-%ED%8C%81/" target="_blank">견고한 서비스를 만들기 위한 팁</a></h4>
+<p><a href="/assets/post/deployment_strategy.png" class="fluidbox-trigger">
+  <img src="/assets/post/deployment_strategy.png" alt="" />
+</a></p>
+
+<ul>
+  <li>서비스 운영 및 인프라 관리에 대한 훌륭한 통찰력이 포함 되어있습니다.</li>
+  <li>특히 배포 시간에 대한 기준이 저희의 상식 (업무시간 이후, 새벽)과는 많이 다르다는 것을 눈 여겨 볼만합니다.</li>
+  <li>내용을 요약하자면 (일부 공감 가지 않거나, 적용이 필요 없을 것 같은 내용은 제외 하였습니다)
+    <ul>
+      <li>하나의 소스 트리로 여러 국가 서비스가 가능해야 함</li>
+      <li>클라우드 서비스 적극 활용 (PaaS로 생각해도 무방할 것 같습니다)</li>
+      <li>개발자는 운영 서버, 운영 DB에 접근하지 못함 (보안 측면도 있지만, 시스템의 안정성을 보장할 수 있음)</li>
+      <li>(운영 DB 접근을 못하는 것을 보완하기 위해서) 좋은 모니터링 체계 구축</li>
+      <li>배포는 <code class="highlighter-rouge">근무 시간</code> 중에만</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="aws-iot-버튼을-이용한-출입문-벨-만들기"><a href="http://woowabros.github.io/study/2016/10/28/woowahan_chime_bell.html" target="_blank">AWS IoT 버튼을 이용한 출입문 벨 만들기!</a></h4>
+<p><a href="/assets/post/amazon_dash_door_bell_poc.png" class="fluidbox-trigger">
+  <img src="/assets/post/amazon_dash_door_bell_poc.png" alt="" />
+</a></p>
+
+<ul>
+  <li>AWS IoT와 Lambda + LINE Message API를 사용해서 버튼을 누르면 메신저로 “문열어 주세요” 라고 입력이 되도록 만든 사례입니다.</li>
+  <li>이런 프로젝트를 진행을 하고, 사례를 공유하는 사내 분위기가 좋아 보입니다.
+    <ul>
+      <li>그리고 이런 기술 블로그를 외부에 공유하는 것 자체가 <code class="highlighter-rouge">회사에 대한 마케팅 효과</code>로 ROI가 무엇보다 크다라고 생각하구요.</li>
+      <li>개인적으로 LG도 “사랑해요 LG”라는 감성에 호소하는 것 보다, 괜찮은 개발자를 유치하기 위해서는 이러한 기술 공유와 공개가 필요하다고 생각합니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="신입-사원-웹-개발자-필기-시험-문제"><a href="https://github.com/EBvi/dev-matrix/blob/master/dev-test.md" target="_blank">신입 사원 웹 개발자 필기 시험 문제</a></h4>
+<ul>
+  <li>최근 회사에 지원하는 SW직군 후보자들에 대한 면접을 보면서, 면접 질문을 어떻게 던져야 하나 고민을 했었는데 훌륭한 참고 사례라고 생각합니다.
+    <ul>
+      <li>기술적인 질문과 더불어 전반적으로 업무 센스와 영어 독해 능력, Linux 사용 경험 등을 묻는 것이 좋아 보입니다.</li>
+      <li>예) alz로 압축을 하거나, hwp로 문서를 작성하여 외국에 전송하면 안 되는 이유를 설명하시오.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="enabling-required-reviews-for-pull-requests"><a href="https://help.github.com/articles/enabling-required-reviews-for-pull-requests/" target="_blank">Enabling required reviews for pull requests</a></h4>
+<ul>
+  <li>Github의 기능 업데이트 내용입니다. (역시 Github 짱)
+    <ul>
+      <li>protected branch에 merge 되기 전에 반드시 review를 해야만 진행 가능하도록 설정 가능</li>
+    </ul>
+  </li>
+  <li>파트 내부적으로도 Code Review를 활성화 하고, 가능한 Process 적으로 강제를 하려고 시도 중인데, Tool 적으로 지원이 되는 것은 무척 환영할 일이라고 봅니다.</li>
+</ul>
+
+<h4 id="git-add--p-와-git-commit--v-의-사용"><a href="https://blog.outsider.ne.kr/1247" target="_blank">git add -p 와 git commit -v 의 사용</a></h4>
+<p><a href="/assets/post/using_git_add_p.png" class="fluidbox-trigger">
+  <img src="/assets/post/using_git_add_p.png" alt="" />
+</a></p>
+
+<ul>
+  <li>파일 단위가 아니라, 파일 내의 <code class="highlighter-rouge">변경사항 단위</code>로 Commit을 하면 장점이 많습니다.
+    <ul>
+      <li>누구나 늦지 않았습니다.</li>
+      <li>저도 바로 이 글을 보기 전까지 git add –a를 썼던 잘못된 개발자입니다.</li>
+      <li>특히나 동일 파일을 여러 명이 서버에서 같이 수정하는 경우에는 더더욱 필수 입니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="파이썬-생존-안내서"><a href="http://www.slideshare.net/sublee/ss-67589513" target="_blank">파이썬 생존 안내서</a></h4>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/4pvoqooy8W7ETz" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/sublee/ss-67589513" title="파이썬 생존 안내서 (자막)" target="_blank">파이썬 생존 안내서 (자막)</a> </strong> von <strong><a target="_blank" href="//www.slideshare.net/sublee">흥섭 이</a></strong> </div>
+</div>
+<ul>
+  <li>파이썬에 관심이 있었는데 기회가 없었던 분들은, 꼭 보세요 두 번 보세요.</li>
+  <li>800페이지 가량인데 한페이지 한페이지가 속도감있게 넘어갑니다.</li>
+</ul>
+
+<h4 id="obfuscated-c-code-competition"><a href="http://faehnri.ch//have-fun/" target="_blank">Obfuscated C Code Competition</a></h4>
+<p><a href="/assets/post/c_lang_obfuscate.png" class="fluidbox-trigger">
+  <img src="/assets/post/c_lang_obfuscate.png" alt="" />
+</a></p>
+
+<ul>
+  <li>C언어 난독화 코드를 이해할 수 있도록 도와주는 글 입니다.</li>
+  <li>가끔 <a href="https://en.wikipedia.org/wiki/Code_golf" target="_blank">Code Golf</a> 등을 보면 이해할 수 없는 코드들을 마주하게 되는데, 해당 코드들을 읽는 방법을 배울 수 있습니다.</li>
+</ul>
+
+<h4 id="모바일-ui-디자인-시-고려해야-할-가이드라인-모음"><a href="https://brunch.co.kr/@chulhochoiucj0/8" target="_blank">모바일 UI 디자인 시 고려해야 할 가이드라인 모음</a></h4>
+<ul>
+  <li>개발자가 봐도 이해가 가능하고 납득할 수 있다는 것 자체가 너무 잘 정리된 글입니다.</li>
+  <li>주변 UI 개발자들에게 공유해주고 싶은 내용이네요.</li>
+</ul>
+
+<h2 id="기타-읽을-거리">기타 읽을 거리</h2>
+
+<h4 id="회의-시간에-똑똑해-보이는-법-9가지"><a href="https://sangminpark.blog/2016/10/25/%ED%9A%8C%EC%9D%98-%EC%8B%9C%EA%B0%84%EC%97%90-%EB%98%91%EB%98%91%ED%95%B4%EB%B3%B4%EC%9D%B4%EB%8A%94%EB%B2%95-9%EA%B0%80%EC%A7%80/" target="_blank">회의 시간에 똑똑해 보이는 법 9가지</a></h4>
+<p><a href="/assets/post/discuss_mess_up.png" class="fluidbox-trigger">
+  <img src="/assets/post/discuss_mess_up.png" alt="" />
+</a></p>
+
+<ul>
+  <li>가볍게 읽을 수 있는데, 해당 기법을 모두 몸에 익혔을 때의 효과는 실제로 엄청날 것 같습니다.</li>
+  <li>그런데 문제는 모든 참석자가 이렇다면… 끔직합니다.</li>
+</ul>
+
+<h4 id="취업-면접에서-질문-있으세요-시간에-꼭-물어봐야-할-질문은"><a href="https://www.youtube.com/watch?v=Rcn_vD9RdEw" target="_blank">취업 면접에서 ‘질문 있으세요?’ 시간에 꼭 물어봐야 할 질문은?</a></h4>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe src="https://www.youtube.com/embed/Rcn_vD9RdEw?modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<ul>
+  <li>4분짜리 동영상인데 흥미 진진합니다.</li>
+  <li>특히 아래 질문을 통해서 면접관 우려를 파악해서, 즉시 자신감 있는 대안을 대답할 수 있다면 유용할 것 같네요.  (영상을 보면 어떻게 써먹는지가 나옵니다)</li>
+</ul>
+
+<h4 id="dynamic-projection-mapping-onto-deforming-non-rigid-surface"><a href="https://www.youtube.com/watch?v=-bh1MHuA5jU" target="_blank">Dynamic projection mapping onto deforming non-rigid surface</a></h4>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe src="https://www.youtube.com/embed/bh1MHuA5jU?modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<ul>
+  <li>초당 1000회로 표면을 감지해서 프로젝션할 내용을 바꾸는 다이내믹 프로젝션 기술 데모 영상
+    <ul>
+      <li>표면을 빠르게 움직이거나 늘여도 내용이 매우 자연스럽게 바뀌는데,</li>
+      <li>눈에 보이지 않는 마커가 새겨져 있다고 하네요 (그래도 대단함)</li>
+    </ul>
+  </li>
+</ul>
+
+
+          </div>
+
+          <div class="article-share">
+            
+            <a href="" title="Share on Twitter" onclick="window.open('https://twitter.com/home?status=[NewsLetter] 견고한 서비스를 만들기 위한 팁 (+ 12건) - /posts/how-to-make-robust-service by @funxiah', 'newwindow', 'width=500, height=225'); return false;">
+              <span class="icon icon-social-twitter"></span>
+            </a>
+            <a href="" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=/posts/how-to-make-robust-service', 'newwindow', 'width=500, height=500'); return false;">
+              <span class="icon icon-social-facebook"></span>
+            </a>
+            <a href="" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=/posts/how-to-make-robust-service', 'newwindow', 'width=550, height=400'); return false;">
+              <span class="icon icon-social-googleplus"></span>
+            </a>
+          </div>
+
+          
+            <div id="disqus_thread" class="article-comments"></div>
+            <script>
+              (function() {
+                  var d = document, s = d.createElement('script');
+                  s.src = '//sooshia-jekyll.disqus.com/embed.js';
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          
+        </article>
+        <footer class="footer reveal">
+  <p>
+    Chalk is a high quality, completely customizable, performant and 100% free
+    blog template for Jekyll built by
+    <a href="/about" title="About me">Nielsen Ramon</a>. Download it <a href="https://github.com/nielsenramon/chalk" target="_blank" title="Download Chalk">here</a>.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="/assets/vendor.js"></script>
+<script type="text/javascript" src="/assets/application.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Cormorant Garamond:700', 'Lato:300,400,700']
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

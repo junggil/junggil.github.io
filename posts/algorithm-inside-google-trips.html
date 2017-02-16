@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Cloud/IoT NewsLetters | [NewsLetter] Algorithm Inside Google Trips (+ 9건)</title>
+  <meta name="description" content="Google Trips에 사용된 Eulerian Graph부터 TSP까지의 알고리즘과 응용을 설명">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="[NewsLetter] Algorithm Inside Google Trips (+ 9건)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/posts/algorithm-inside-google-trips">
+  <meta property="og:description" content="Google Trips에 사용된 Eulerian Graph부터 TSP까지의 알고리즘과 응용을 설명">
+  <meta property="og:site_name" content="Cloud/IoT NewsLetters">
+  <meta property="og:image" content="/assets/og-image.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="/posts/algorithm-inside-google-trips">
+  <meta name="twitter:title" content="[NewsLetter] Algorithm Inside Google Trips (+ 9건)">
+  <meta name="twitter:description" content="Google Trips에 사용된 Eulerian Graph부터 TSP까지의 알고리즘과 응용을 설명">
+  <meta name="twitter:image" content="/assets/og-image.jpg">
+
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link href="/feed.xml" type="application/rss+xml" rel="alternate" title="Cloud/IoT NewsLetters Last 10 blog posts" />
+
+  
+    <link type="text/css" rel="stylesheet" href="/assets/light.css">
+  
+</head>
+
+<body>
+  <main role="main">
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav reveal">
+  <a href="/" class="header-logo" title="Cloud/IoT NewsLetters">Cloud/IoT NewsLetters</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <span class="icon icon-android-person"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://twitter.com/funxiah" target="_blank" title="Twitter">
+          <span class="icon icon-social-twitter"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://www.facebook.com/jeonggil.lee.7" target="_blank" title="Facebook">
+          <span class="icon icon-social-facebook"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/sooshia" target="_blank" title="GitHub">
+          <span class="icon icon-social-github"></span>
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="mailto:sooshia@gmail.com" target="_blank" title="Email">
+          <span class="icon icon-at"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed.xml" target="_blank" title="RSS">
+          <span class="icon icon-social-rss"></span>
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+        <article class="article reveal">
+          <header class="article-header">
+            <h1>[NewsLetter] Algorithm Inside Google Trips (+ 9건)</h1>
+            <p>Google Trips에 사용된 Eulerian Graph부터 TSP까지의 알고리즘과 응용을 설명</p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                October 13, 2016
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  3 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/TSP">TSP</a>
+                
+                  <a href="/tag/Moral Machine">Moral Machine</a>
+                
+                  <a href="/tag/디지털 노마드">디지털 노마드</a>
+                
+                  <a href="/tag/OpenCV">OpenCV</a>
+                
+                  <a href="/tag/Coding Interview">Coding Interview</a>
+                
+                  <a href="/tag/Molly-Guard">Molly-Guard</a>
+                
+                  <a href="/tag/Physics">Physics</a>
+                
+                  <a href="/tag/Incentive">Incentive</a>
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <h2 id="개발-관련">개발 관련</h2>
+
+<h4 id="the-280-year-old-algorithm-inside-google-trips"><a href="https://research.googleblog.com/2016/09/the-280-year-old-algorithm-inside.html" target="_blank">The 280-Year-Old Algorithm Inside Google Trips</a></h4>
+<p><a href="/assets/post/algorithm_of_google_trips.png" class="fluidbox-trigger">
+  <img src="/assets/post/algorithm_of_google_trips.png" alt="" />
+</a></p>
+
+<ul>
+  <li>얼마 전에 출시된 Google Trip에 사용된 알고리즘에 대한 소개 입니다. (Eulerian Graph 부터 TSP 까지)</li>
+  <li>이 글을 보면서 App에 대한 신뢰가 생겨서, 다음 여행에 Google Trips를 꼭 써보고 싶어지네요.</li>
+  <li>수학을 잘 모르는 저도 관심 있게 읽을 수 있게 친절하고 자세히 설명을 해 두었습니다.
+    <ol>
+      <li>지점들을 연결해서 그래프를 만들고</li>
+      <li>MST를 구성</li>
+      <li>한붓그리기가 가능하도록 edge가 홀수인 지점 간에 경로를 추가</li>
+      <li>여기에 구글에 수집된 정보를 포함해서 (어느 식당이 언제 사람이 많고, 어느 도로가 언제 막히는지) 경로를 최적화</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="moral-machine-인공지능용-윤리"><a href="http://moralmachine.mit.edu/" target="_blank">Moral Machine (인공지능용 윤리)</a></h4>
+<p><a href="/assets/post/self_driving_ethics.png" class="fluidbox-trigger">
+  <img src="/assets/post/self_driving_ethics.png" alt="" />
+</a></p>
+
+<ul>
+  <li>MIT 미디어랩에서 만든 인공지능용 윤리. 소위 trolley problem이라도 부르는 인명피해를 피할 수 없는 상황에서 어떤 가치에 입각해 피해를 최소화해야 하는 지를 판단하는 테스트</li>
+  <li>총 13개의 상황에 대해서 2가지 상황 중에 선택을 해야 하는데, 선택을 하기가 쉽지 않습니다.
+    <ul>
+      <li>끝까지 진행하시면 스스로가 어떤 기준으로 윤리적인 판단을 하는지에 대해서 확인해 볼 수 있습니다.</li>
+    </ul>
+  </li>
+  <li>이와 별개로 자율주행에는 사고 시에 배상 및 책임 관련해서도 재미있는 주제라 찾아볼 만 합니다. (제조사가 책임을 어디까지 포함해야 하는지)</li>
+</ul>
+
+<h4 id="디지털-노마드-관련">[디지털 노마드 관련]</h4>
+<ul>
+  <li>주거 및 식사를 위한 낮은 비용과 IT 인프라가 갖추어진 도시들이 노마드에 적합하다고 합니다.</li>
+  <li>그 중에서도 주변에 휴식을 위한 아름다운 자연을 갖추고 있는 발리가 좋아 보이네요.</li>
+  <li>저희 회사도 TDR/Task에 대해서 Challenge한 골을 주고 대신 디지털노마드로 작업공간을 자유롭게 지원해줄 수 있는 날이 올까요?
+    <ol>
+      <li>발리: <a href="https://brunch.co.kr/@lynnata/15" target="_blank">디지털노마드? 발리 한 달 살기(총 116만원)</a></li>
+      <li>발리: <a href="https://brunch.co.kr/@rabbitchoi/1" target="_blank">나는 왜 디지털 노마드가 되었나</a></li>
+      <li>방콕: <a href="http://joonnoh.com/blog/5881" target="_blank">Neo Digital Nomad! (주)카닥의 디지탈 노마드 실험. 카닥 해외 전지훈련기</a></li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="직원-3만명-넘는-회사에서-메일링-리스트-관리를-허술하게-하면-발생하는-일"><a href="https://www.reddit.com/r/talesfromtechsupport/comments/420oan/companywide_email_30000_employees_autoresponders/" target="_blank">직원 3만명 넘는 회사에서 메일링 리스트 관리를 허술하게 하면 발생하는 일</a></h4>
+<ul>
+  <li>사건 요약
+    <ol>
+      <li>누군가가 전체 임직원이 등록된 메일링 주소로 메일을 보냄</li>
+      <li>휴가/부재중인 사람들이 등록한 자동회신 메일이 전체 메일로 발송됨</li>
+      <li>자동회신 메일에 대한 자동회신 메일이 발송됨 (반복)</li>
+      <li>인프라 장애 발생</li>
+      <li>인프라 담당자가 자동회신 처리가 되지 않도록 조치 후 재시작</li>
+      <li>일부 자동회신 메일이 처리가 누락 -&gt;  2번 이후 상황 재발생</li>
+    </ol>
+  </li>
+  <li>전체 alias 메일에 대해서 접근권한이 필요하다는 교훈을 얻을 수 있습니다.</li>
+</ul>
+
+<h4 id="bubble-sheet-multiple-choice-scanner-and-test-grader-using-omr-python-and-opencv"><a href="http://www.pyimagesearch.com/2016/10/03/bubble-sheet-multiple-choice-scanner-and-test-grader-using-omr-python-and-opencv/" target="_blank">Bubble sheet multiple choice scanner and test grader using OMR, Python and OpenCV</a></h4>
+<p><a href="/assets/post/opencv_poc_using_python.png" class="fluidbox-trigger">
+  <img src="/assets/post/opencv_poc_using_python.png" alt="" />
+</a></p>
+
+<ul>
+  <li>Python과 OpenCV를 사용하여 객관식 시험 자동 채점사례 입니다.</li>
+  <li>IT에서 일반적인 기술도 다른 분야와 접목되면 유용한 경우를 만들 수 있어 보입니다.</li>
+  <li>그런데 시험지 사진을 찍고, 다음장으로 넘기는 부분에 대한 자동화도 고민이 필요할 것 같네요.</li>
+</ul>
+
+<h2 id="문제해결-및-코딩인터뷰-관련">문제해결 및 코딩인터뷰 관련</h2>
+
+<h4 id="cracking-the-coding-interview"><a href="https://www.hackerrank.com/domains/tutorials/cracking-the-coding-interview" target="_blank">Cracking the Coding Interview</a></h4>
+<ul>
+  <li>믿고 쓰는(?) <code class="highlighter-rouge">hackerrank</code>에서 제공하는 코딩인뷰 관련 튜토리얼과 영상 입니다.</li>
+  <li>굳이 코딩인터뷰를 준비할 필요가 없는 분들이라도, 가벼운 마음으로 영상을 보면서 문제를 풀어보면 재미 있습니다.</li>
+  <li>자매품으로 <a href="https://www.hackerrank.com/domains/tutorials/30-days-of-code" target="_blank">30 Days of Code Challenges</a>도 있습니다.</li>
+</ul>
+
+<h2 id="기타-읽을거리">기타 읽을거리</h2>
+
+<h4 id="몰리-가드-molly-guard"><a href="https://en.wiktionary.org/wiki/molly-guard" target="_blank">몰리 가드 (molly-guard)</a></h4>
+<p><a href="/assets/post/molly-guard.png" class="fluidbox-trigger">
+  <img src="/assets/post/molly-guard.png" alt="" />
+</a></p>
+
+<ul>
+  <li>거대한-빨간-버튼을 덮는 플라스틱 커버를 ‘몰리 가드’ 라고 부릅니다.</li>
+  <li>어원이 재미있습니다.
+    <blockquote>
+      <p>한 프로그래머의 딸이 IBM 메인프레임의 버튼을 자꾸 누르려고 해서 커버를 달았는데 그 딸의 이름이 <code class="highlighter-rouge">몰리</code> 였다고 합니다.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h4 id="mythbusters---soccer-ball-shot-from-truck">Mythbusters - Soccer Ball Shot from Truck</h4>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe src="https://www.youtube.com/embed/BLuI118nhzc?modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<ul>
+  <li>50Mph 로 달리는 트럭에서, 진행방향과 반대 방향으로 50Mph로 공을 발사하면 어떻게 될까요?</li>
+  <li>저처럼 물리 이론에 대해서 직접 경험하기 전까지 신뢰하지 못하는(?) 분들은, 해당 동영상을 보면 느낌이 새롭습니다.</li>
+</ul>
+
+<h4 id="업무일지-작성을-도와주는-스크린샷-자동-저장-앱"><a href="http://imays.blog.me/220825210221" target="_blank">업무일지 작성을 도와주는 스크린샷 자동 저장 앱</a></h4>
+<ul>
+  <li>스스로의 하루 업무에 대해서 되돌아 볼 수 있게 해줍니다.</li>
+  <li>분단위로 어떤 일을 하면서 하루를 보냈는지 Tracking 할 수 있습니다.</li>
+  <li>WPPM (원단위 낭비제거)을 하던 시절이라면 필수 앱이었을 것 같네요</li>
+</ul>
+
+<h4 id="성과급-받은-직원이-더-열심히-일한다는-생각은-리더의-착각"><a href="http://m.biz.chosun.com/svc/article.html?contid=2016100701594" target="_blank">“성과급 받은 직원이 더 열심히 일한다는 생각은 리더의 착각”</a></h4>
+<ul>
+  <li>성과급이 효능이 없다라고 생각하지는 않지만, 금액에 비례하지는 않는다고 생각합니다.</li>
+  <li>저는 현재의 인센티브 제도를 개선해서, (외국의 경우처럼) <code class="highlighter-rouge">근속년수에 비례</code>해서 <code class="highlighter-rouge">자사주</code>로 지급하는 것도 좋아 보입니다.
+    <ul>
+      <li>회사에서의 인력이탈 방지, 회사의 주식/가치를 올리기 위해서 적극적으로 참여하도록 유도</li>
+    </ul>
+  </li>
+</ul>
+
+          </div>
+
+          <div class="article-share">
+            
+            <a href="" title="Share on Twitter" onclick="window.open('https://twitter.com/home?status=[NewsLetter] Algorithm Inside Google Trips (+ 9건) - /posts/algorithm-inside-google-trips by @funxiah', 'newwindow', 'width=500, height=225'); return false;">
+              <span class="icon icon-social-twitter"></span>
+            </a>
+            <a href="" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=/posts/algorithm-inside-google-trips', 'newwindow', 'width=500, height=500'); return false;">
+              <span class="icon icon-social-facebook"></span>
+            </a>
+            <a href="" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=/posts/algorithm-inside-google-trips', 'newwindow', 'width=550, height=400'); return false;">
+              <span class="icon icon-social-googleplus"></span>
+            </a>
+          </div>
+
+          
+            <div id="disqus_thread" class="article-comments"></div>
+            <script>
+              (function() {
+                  var d = document, s = d.createElement('script');
+                  s.src = '//sooshia-jekyll.disqus.com/embed.js';
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          
+        </article>
+        <footer class="footer reveal">
+  <p>
+    Chalk is a high quality, completely customizable, performant and 100% free
+    blog template for Jekyll built by
+    <a href="/about" title="About me">Nielsen Ramon</a>. Download it <a href="https://github.com/nielsenramon/chalk" target="_blank" title="Download Chalk">here</a>.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="/assets/vendor.js"></script>
+<script type="text/javascript" src="/assets/application.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Cormorant Garamond:700', 'Lato:300,400,700']
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

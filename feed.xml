@@ -1,20 +1,90 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>Cloud/IoT NewsLetters</title>
+    <description></description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>[NewsLetter] Google Cloud Spanner(+ 13건)</title>
+        <description>Globally Scalable한 SQL database 서비스 소개</description>
+        <pubDate>Thu, 16 Feb 2017 00:00:00 +0900</pubDate>
+        <link>/posts/google-cloud-spanner</link>
+        <guid isPermaLink="true">/posts/google-cloud-spanner</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>[NewsLetter] Bloom Filters (+ 9건)</title>
+        <description>DynamoDB 에서부터 Postgresql, HBase and Bitcoin 까지 분산시스템에서 널리 사용되는 Bloom Filter에 대한 소개</description>
+        <pubDate>Sun, 05 Feb 2017 00:00:00 +0900</pubDate>
+        <link>/posts/bloom-filters</link>
+        <guid isPermaLink="true">/posts/bloom-filters</guid>
+      </item>
+    
+      <item>
+        <title>[NewsLetter] H1B America has a secret weapon (+ 29건)</title>
+        <description>Trumph의 이민법에 대한  행정명령 관련, 실리콘밸리를 지탱하는 비밀 H1B</description>
+        <pubDate>Tue, 31 Jan 2017 00:00:00 +0900</pubDate>
+        <link>/posts/h1b-america-secret-weapon</link>
+        <guid isPermaLink="true">/posts/h1b-america-secret-weapon</guid>
+      </item>
+    
+      <item>
+        <title>[NewsLetter] Fool's Errand (+ 19건)</title>
+        <description>회사 내부시스템의 약점을 적극적으로 노출하여 시스템을 보완/개선하는 사례</description>
+        <pubDate>Sun, 15 Jan 2017 00:00:00 +0900</pubDate>
+        <link>/posts/fools-errand</link>
+        <guid isPermaLink="true">/posts/fools-errand</guid>
+      </item>
+    
+      <item>
+        <title>[NewsLetter] 일 년에 한 개의 사이드 프로젝트 (+ 21건)</title>
+        <description>개인프로젝트를 진행을 위한 Tip과 성공 사례들 중심으로</description>
+        <pubDate>Sun, 25 Dec 2016 00:00:00 +0900</pubDate>
+        <link>/posts/personal-project-tips</link>
+        <guid isPermaLink="true">/posts/personal-project-tips</guid>
+      </item>
+    
+      <item>
+        <title>[NewsLetter] AWS re-Invent 2016 Summary</title>
+        <description>AWS re-Invent를 통해 신규로 소개된 AWS 서비스들에 대한 정리, MS Azure와의 비교</description>
+        <pubDate>Mon, 12 Dec 2016 00:00:00 +0900</pubDate>
+        <link>/posts/aws-reinvent-2016-summary</link>
+        <guid isPermaLink="true">/posts/aws-reinvent-2016-summary</guid>
+      </item>
+    
+      <item>
+        <title>[NewsLetter] Google Cloud Platform 특집 (+ 13건)</title>
+        <description>GPU 인스턴스와, AWS RI (Reserved Instance)와의 요금제 비교 중심으로</description>
+        <pubDate>Mon, 21 Nov 2016 00:00:00 +0900</pubDate>
+        <link>/posts/google-cloud-platform</link>
+        <guid isPermaLink="true">/posts/google-cloud-platform</guid>
+      </item>
+    
+      <item>
+        <title>[NewsLetter] Developer-Driven Development (+ 8건)</title>
+        <description>어떻게 시간 낭비없이, 코드가 엉망이 되지 않으면서, 원하지 않는 개발도 하지 않으면서 회사를 성장시킬 프로세스를 만들 수 있는가?</description>
+        <pubDate>Fri, 11 Nov 2016 00:00:00 +0900</pubDate>
+        <link>/posts/developer-driven-development</link>
+        <guid isPermaLink="true">/posts/developer-driven-development</guid>
+      </item>
+    
+      <item>
+        <title>[NewsLetter] 견고한 서비스를 만들기 위한 팁 (+ 12건)</title>
+        <description>서비스 운영 및 인프라 관리에 대한 조언과, 배포 전략</description>
+        <pubDate>Tue, 01 Nov 2016 00:00:00 +0900</pubDate>
+        <link>/posts/how-to-make-robust-service</link>
+        <guid isPermaLink="true">/posts/how-to-make-robust-service</guid>
+      </item>
+    
+      <item>
+        <title>[NewsLetter] 조직문화 관련 특집 (+ 12건)</title>
+        <description>신뢰받는 리더가 되는 방법과, 직원들이 성과창출을 이루고 행복을 느끼게 하는 방법</description>
+        <pubDate>Fri, 21 Oct 2016 00:00:00 +0900</pubDate>
+        <link>/posts/organizational-culture</link>
+        <guid isPermaLink="true">/posts/organizational-culture</guid>
+      </item>
+    
   </channel>
 </rss>

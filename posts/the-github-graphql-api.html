@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Cloud/IoT NewsLetters | [NewsLetter] The GitHub GraphQL API (+ 8건)</title>
+  <meta name="description" content="REST API를 대체하면서 App과의 Interface를 보다 효과적으로 가져갈 수 있는 GraphQL API 소개">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="[NewsLetter] The GitHub GraphQL API (+ 8건)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/posts/the-github-graphql-api">
+  <meta property="og:description" content="REST API를 대체하면서 App과의 Interface를 보다 효과적으로 가져갈 수 있는 GraphQL API 소개">
+  <meta property="og:site_name" content="Cloud/IoT NewsLetters">
+  <meta property="og:image" content="/assets/og-image.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="/posts/the-github-graphql-api">
+  <meta name="twitter:title" content="[NewsLetter] The GitHub GraphQL API (+ 8건)">
+  <meta name="twitter:description" content="REST API를 대체하면서 App과의 Interface를 보다 효과적으로 가져갈 수 있는 GraphQL API 소개">
+  <meta name="twitter:image" content="/assets/og-image.jpg">
+
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link href="/feed.xml" type="application/rss+xml" rel="alternate" title="Cloud/IoT NewsLetters Last 10 blog posts" />
+
+  
+    <link type="text/css" rel="stylesheet" href="/assets/light.css">
+  
+</head>
+
+<body>
+  <main role="main">
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav reveal">
+  <a href="/" class="header-logo" title="Cloud/IoT NewsLetters">Cloud/IoT NewsLetters</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <span class="icon icon-android-person"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://twitter.com/funxiah" target="_blank" title="Twitter">
+          <span class="icon icon-social-twitter"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://www.facebook.com/jeonggil.lee.7" target="_blank" title="Facebook">
+          <span class="icon icon-social-facebook"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/sooshia" target="_blank" title="GitHub">
+          <span class="icon icon-social-github"></span>
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="mailto:sooshia@gmail.com" target="_blank" title="Email">
+          <span class="icon icon-at"></span>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed.xml" target="_blank" title="RSS">
+          <span class="icon icon-social-rss"></span>
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+        <article class="article reveal">
+          <header class="article-header">
+            <h1>[NewsLetter] The GitHub GraphQL API (+ 8건)</h1>
+            <p>REST API를 대체하면서 App과의 Interface를 보다 효과적으로 가져갈 수 있는 GraphQL API 소개</p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                September 20, 2016
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  3 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/GraphQL API">GraphQL API</a>
+                
+                  <a href="/tag/Web 도용">Web 도용</a>
+                
+                  <a href="/tag/자율주행">자율주행</a>
+                
+                  <a href="/tag/Web BLE">Web BLE</a>
+                
+                  <a href="/tag/Obama">Obama</a>
+                
+                  <a href="/tag/Traffic">Traffic</a>
+                
+                  <a href="/tag/Github">Github</a>
+                
+                  <a href="/tag/회고">회고</a>
+                
+                  <a href="/tag/기업문화">기업문화</a>
+                
+                  <a href="/tag/맥킨지">맥킨지</a>
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <h2 id="개발-관련">개발 관련</h2>
+
+<h4 id="the-github-graphql-api"><a href="http://githubengineering.com/the-github-graphql-api/" target="_blank">The GitHub GraphQL API</a></h4>
+<p><a href="/assets/post/github_graphql_api_sample.png" class="fluidbox-trigger">
+  <img src="/assets/post/github_graphql_api_sample.png" alt="" />
+</a></p>
+
+<ul>
+  <li>최근에 Github가 REST API v4를 발표하면서, <code class="highlighter-rouge">GraphQL</code>을 동시에 지원하기로 발표했습니다.</li>
+  <li>GraphQL은 업계에서 기존 REST API를 대체하는 기술로 떠오르는 규격입니다.</li>
+  <li>제가 생각하는 특징이자 장점은 아래와 같습니다.
+    <ul>
+      <li>응답 형식을 <strong>Client에서 결정</strong>합니다.</li>
+      <li>Client에서 필요한 데이터를 어떤 형식으로 조회할 것인지를 정의해서 요청하면 그에 따라서 데이터를 응답해 줍니다.</li>
+      <li>따라서 기존에 설계된 REST API의 결과가, 새로운 시나리오에 적합하지 않은 경우가 흔하게 발생하는데 기존에는 범용으로 설계된 REST API 몇 개를 조합해서 써야 했다면 GraphQL은 그럴 필요가 없습니다.</li>
+      <li>위에 특징이 시나리오 변경에 따른 REST API를 같이 수정하거나 변경 해야 하는 <strong>관리 부담을 줄여주고 성능적으로도 유리</strong>할 수 있습니다.</li>
+    </ul>
+  </li>
+  <li>기존에 REST API를 제공하는 파트에서는 한번쯤 눈여겨보면 좋을 것 같습니다.</li>
+</ul>
+
+<h4 id="dear-al-jazeera-why-steal-our-code"><a href="https://www.scrollytelling.io/al-jazeera.html" target="_blank">Dear Al-Jazeera: Why Steal Our Code?</a></h4>
+<ul>
+  <li>Web 진영에서의 자주 겪는 웹페이지 도용 사건입니다.
+    <ul>
+      <li>Web 기반 기술들의 특징상 소스를 노출되지 않게 방어하는 것이 현실적으로 불가능하며, 난독화 정도가 한계입니다.</li>
+    </ul>
+  </li>
+  <li>기자가 작성한 기사를 두 군데의 언론사에 팔았는데, 도덕적인 문제는 차치하고서라도 페이지를 그대로 베껴서 이미지 등의 리소스를 베낀 서버에서 가져와서 서버의 Traffic 비용 부담까지 발생했습니다.</li>
+</ul>
+
+<h3 id="구글의-자율주행테스트와-자율모드해제-보고서의-의미분석"><a href="http://www.digieco.co.kr/KTFront/report/report_issue_trend_view.action?board_seq=11111&amp;board_id=issue_trend&amp;sort_order=&amp;kind=a01&amp;list_page=&amp;list_gubun=&amp;searchtext=&amp;etc1=386&amp;etc2=">구글의 자율주행테스트와 자율모드해제 보고서의 의미분석</a></h3>
+<p><a href="/assets/post/self_driving_car_test_result_by_ca.png" class="fluidbox-trigger">
+  <img src="/assets/post/self_driving_car_test_result_by_ca.png" alt="" />
+</a></p>
+
+<ul>
+  <li>16페이지의 짧은 보고서인데 내용이 무척 흥미롭습니다.</li>
+  <li>캘리포니아주 자동차국(DMV)은 보쉬, 델파이, 구글, 닛산, 메르세데스-벤츠, 테슬라, 폴크스바겐에 대해서 자율주행 테스트 결과를 보고하도록 했는데, 그 보고서 중에서 구글에 대한 내용입니다. (구글 이외의 회사들의 보고서는 내용이 부실하다고 합니다)
+    <ul>
+      <li>전체 주행거리 중에 20% 가량이 자율주행실패(해제)로 메뉴얼 조작으로 전환 된다고 합니다. (완전 자율 주행을 위해서는 99.95% 이상의 신뢰도가 필요해서 현 수준은 무리)</li>
+      <li>7년간 수집한 도로정보를 기반으로 매일 300만 마일을 가상 주행할 수 있는 시뮬레이터가 있다고 합니다. (기계학습 진행 중)</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="the-web-is-getting-bluetooth"><a href="https://goo.gl/IKqwYF" target="_blank">The web is getting bluetooth</a></h4>
+<ul>
+  <li>Web Bluetooth기술이 많이 성숙해졌다는 내용입니다.</li>
+  <li>아직은 여러 가지 이유로 (보안 / 기술적 한계) 제약이 많은 상황인데, 알아두면 좋을 것 같네요.</li>
+  <li>아래는 현재의 한계 입니다.
+    <ul>
+      <li>BLE만 지원 (classic Bluetooth는 미지원)</li>
+      <li>Only Central, no Peripheral</li>
+      <li>One device at a time, no scanning</li>
+      <li>iOS 미지원</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="세미나-정보">세미나 정보</h2>
+
+<h4 id="tech-planet-2016--20161017-월요일"><a href="http://techplanet.skplanet.com/agenda.html" target="_blank">Tech Planet 2016  (2016.10.17 월요일)</a></h4>
+<ul>
+  <li>SKP에서 주최하는 세미나 입니다.</li>
+  <li>9/20일 오후 2시부터 등록이 가능하며, 비용은 단돈 1만원 입니다.</li>
+</ul>
+
+<h2 id="기타-읽을-거리">기타 읽을 거리</h2>
+
+<h4 id="베어-그릴스와-버락-오바마의-대화"><a href="https://sungmooncho.com/2016/09/10/bear-grylls-and-obama/" target="_blank">베어 그릴스와 버락 오바마의 대화</a></h4>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe src="https://www.youtube.com/embed/BViwzLUNXw8?modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<ul>
+  <li>오바마 대통령이 이야기해주는 ‘가족’의 의미</li>
+  <li>그리고 끈기(persistence)의 중요성을 배울 수 있습니다.</li>
+</ul>
+
+<h4 id="한국기업의-조직건강도와-기업문화진단-보고서"><a href="https://t.co/LNViLDYIqF" target="_blank">한국기업의 조직건강도와 기업문화진단 보고서</a></h4>
+<p><a href="/assets/post/culture_of_korean_companies.png" class="fluidbox-trigger">
+  <img src="/assets/post/culture_of_korean_companies.png" alt="" />
+</a></p>
+
+<ul>
+  <li>맥킨지 보고서 자료 입니다. (40페이지)</li>
+  <li>국내 100개 대기업 및 중견기업, 40,951을 대상으로 조사를 했는데, 경영진과 그 외, 연령별, 성별에 따른 <code class="highlighter-rouge">시각 차</code>가 크다는 내용입니다.
+    <ul>
+      <li>예를 들어 리더쉽에 대한 평가는 경영진은 최상 수준으로, 일반직원~중간관리자는 최하 수준으로 인지</li>
+      <li>야근/회의/회식/업무시지에 대해서 20/30대는 문제의식을 보이고, 50대는 긍정적으로 인식</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="플레이탕스-해커톤-후기"><a href="http://lqez.github.io/blog/a-postmortem-of-the-platance-hackathon.html" target="_blank">플레이탕스 해커톤 후기</a></h4>
+<ul>
+  <li>스마트 스터디에서 진행한 해커톤 후기 입니다.</li>
+  <li>스마트 스터디라는 회사 자체의 문화나 업무 분위기가 무척 좋아 보이네요.</li>
+</ul>
+
+<h4 id="the-simple-solution-to-traffic">The Simple Solution to Traffic</h4>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe src="https://www.youtube.com/embed/iHzzSao6ypE?modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<ul>
+  <li>교통 체증이 생기는 이유에 대해서 설명이 쉽고 명쾌합니다.</li>
+  <li>요약하면 교차로(의 신호등)과 사람들간의 인지/반응 속도의 차이가 주요 원인인데, 흥미롭게도 이 두 가지 모두 자율주행을 적용하면 근본적으로 해결이 가능할 수 있어 보입니다.
+    <ul>
+      <li>교차로에 신호등이 심지어는 필요 없을 수 있다는 인식이 놀랍네요</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="신규-버전-및-출시-정보">신규 버전 및 출시 정보</h2>
+
+<h4 id="code-better-with-reviews"><a href="https://github.com/universe-2016" target="_blank">Code better with Reviews</a></h4>
+<p><a href="/assets/post/github_trello_like_ux.png" class="fluidbox-trigger">
+  <img src="/assets/post/github_trello_like_ux.png" alt="" />
+</a></p>
+
+<ul>
+  <li>Github에 Pull Request 리뷰 기능이 추가 되었고</li>
+  <li>칸반 형태로 프로젝트 관리 기능이 추가 되었습니다. (전 이게 마음에 드네요)</li>
+</ul>
+
+          </div>
+
+          <div class="article-share">
+            
+            <a href="" title="Share on Twitter" onclick="window.open('https://twitter.com/home?status=[NewsLetter] The GitHub GraphQL API (+ 8건) - /posts/the-github-graphql-api by @funxiah', 'newwindow', 'width=500, height=225'); return false;">
+              <span class="icon icon-social-twitter"></span>
+            </a>
+            <a href="" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=/posts/the-github-graphql-api', 'newwindow', 'width=500, height=500'); return false;">
+              <span class="icon icon-social-facebook"></span>
+            </a>
+            <a href="" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=/posts/the-github-graphql-api', 'newwindow', 'width=550, height=400'); return false;">
+              <span class="icon icon-social-googleplus"></span>
+            </a>
+          </div>
+
+          
+            <div id="disqus_thread" class="article-comments"></div>
+            <script>
+              (function() {
+                  var d = document, s = d.createElement('script');
+                  s.src = '//sooshia-jekyll.disqus.com/embed.js';
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          
+        </article>
+        <footer class="footer reveal">
+  <p>
+    Chalk is a high quality, completely customizable, performant and 100% free
+    blog template for Jekyll built by
+    <a href="/about" title="About me">Nielsen Ramon</a>. Download it <a href="https://github.com/nielsenramon/chalk" target="_blank" title="Download Chalk">here</a>.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="/assets/vendor.js"></script>
+<script type="text/javascript" src="/assets/application.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Cormorant Garamond:700', 'Lato:300,400,700']
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
